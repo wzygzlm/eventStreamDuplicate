@@ -65,7 +65,7 @@
     "ap_clk": {
       "type": "clock",
       "ctype": {"CLK": {"Type": "bool"}},
-      "buses": "s_axi_config xStreamOut0_V_V yStreamOut0_V_V polStreamOut0_V_V tsStreamOut0_V_V cornerStreamOut0_V_V xStreamOut1_V_V yStreamOut1_V_V polStreamOut1_V_V tsStreamOut1_V_V cornerStreamOut1_V_V xStreamIn_V_V yStreamIn_V_V tsStreamIn_V_V polStreamIn_V_V cornerStreamIn_V_V",
+      "buses": "s_axi_config xStreamOut0_V_V yStreamOut0_V_V polStreamOut0_V_V tsStreamOut0_V_V custDataStreamOut0_V_V xStreamOut1_V_V yStreamOut1_V_V polStreamOut1_V_V tsStreamOut1_V_V custDataStreamOut1_V_V xStreamIn_V_V yStreamIn_V_V tsStreamIn_V_V polStreamIn_V_V custDataStreamIn_V_V",
       "reset": "ap_rst_n"
     },
     "ap_ctrl": {
@@ -83,10 +83,10 @@
       "polarity": "ACTIVE_LOW",
       "ctype": {"RST": {"Type": "bool"}}
     },
-    "cornerStreamIn_V_V": {
+    "custDataStreamIn_V_V": {
       "type": "axi4stream",
       "mode": "slave",
-      "port_prefix": "cornerStreamIn_V_V",
+      "port_prefix": "custDataStreamIn_V_V",
       "has_tready": "1",
       "ctype": {
         "TDATA": {
@@ -98,10 +98,10 @@
       },
       "port_width": {"TDATA": "16"}
     },
-    "cornerStreamOut0_V_V": {
+    "custDataStreamOut0_V_V": {
       "type": "axi4stream",
       "mode": "master",
-      "port_prefix": "cornerStreamOut0_V_V",
+      "port_prefix": "custDataStreamOut0_V_V",
       "has_tready": "1",
       "ctype": {
         "TREADY": {"Type": "bool"},
@@ -113,10 +113,10 @@
       },
       "port_width": {"TDATA": "16"}
     },
-    "cornerStreamOut1_V_V": {
+    "custDataStreamOut1_V_V": {
       "type": "axi4stream",
       "mode": "master",
-      "port_prefix": "cornerStreamOut1_V_V",
+      "port_prefix": "custDataStreamOut1_V_V",
       "has_tready": "1",
       "ctype": {
         "TREADY": {"Type": "bool"},
@@ -525,15 +525,15 @@
       "dir": "out",
       "width": "1"
     },
-    "cornerStreamOut0_V_V_TREADY": {
+    "custDataStreamOut0_V_V_TREADY": {
       "dir": "in",
       "width": "1"
     },
-    "cornerStreamOut0_V_V_TDATA": {
+    "custDataStreamOut0_V_V_TDATA": {
       "dir": "out",
       "width": "16"
     },
-    "cornerStreamOut0_V_V_TVALID": {
+    "custDataStreamOut0_V_V_TVALID": {
       "dir": "out",
       "width": "1"
     },
@@ -585,15 +585,15 @@
       "dir": "out",
       "width": "1"
     },
-    "cornerStreamOut1_V_V_TREADY": {
+    "custDataStreamOut1_V_V_TREADY": {
       "dir": "in",
       "width": "1"
     },
-    "cornerStreamOut1_V_V_TDATA": {
+    "custDataStreamOut1_V_V_TDATA": {
       "dir": "out",
       "width": "16"
     },
-    "cornerStreamOut1_V_V_TVALID": {
+    "custDataStreamOut1_V_V_TVALID": {
       "dir": "out",
       "width": "1"
     },
@@ -645,15 +645,15 @@
       "dir": "out",
       "width": "1"
     },
-    "cornerStreamIn_V_V_TDATA": {
+    "custDataStreamIn_V_V_TDATA": {
       "dir": "in",
       "width": "16"
     },
-    "cornerStreamIn_V_V_TVALID": {
+    "custDataStreamIn_V_V_TVALID": {
       "dir": "in",
       "width": "1"
     },
-    "cornerStreamIn_V_V_TREADY": {
+    "custDataStreamIn_V_V_TREADY": {
       "dir": "out",
       "width": "1"
     }
@@ -691,8 +691,8 @@
       "dir": "out",
       "firstOutLatency": "1"
     },
-    "cornerStreamOut0_V_V": {
-      "interfaceRef": "cornerStreamOut0_V_V",
+    "custDataStreamOut0_V_V": {
+      "interfaceRef": "custDataStreamOut0_V_V",
       "dir": "out",
       "firstOutLatency": "1"
     },
@@ -716,8 +716,8 @@
       "dir": "out",
       "firstOutLatency": "1"
     },
-    "cornerStreamOut1_V_V": {
-      "interfaceRef": "cornerStreamOut1_V_V",
+    "custDataStreamOut1_V_V": {
+      "interfaceRef": "custDataStreamOut1_V_V",
       "dir": "out",
       "firstOutLatency": "1"
     },
@@ -737,8 +737,8 @@
       "interfaceRef": "polStreamIn_V_V",
       "dir": "in"
     },
-    "cornerStreamIn_V_V": {
-      "interfaceRef": "cornerStreamIn_V_V",
+    "custDataStreamIn_V_V": {
+      "interfaceRef": "custDataStreamIn_V_V",
       "dir": "in"
     }
   },
@@ -768,7 +768,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2020-07-20 23:02:54 +0200",
+    "Time": "2020-07-20 23:31:10 +0200",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.1"
   }
